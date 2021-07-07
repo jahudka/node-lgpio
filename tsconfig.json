@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "lib": ["es2017"],
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "types": ["node"],
+    "outDir": "dist"
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "lgpio",
+  "version": "0.0.0",
+  "description": "LGPIO bindings for NodeJS",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "gpio",
+    "lgpio"
+  ],
+  "author": "Dan Kadera <me@subsonic.cz>",
+  "license": "MIT",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^4.0.0"
+  },
+  "devDependencies": {
+    "@microsoft/api-documenter": "^7.13.28",
+    "@microsoft/api-extractor": "^7.17.1",
+    "@types/node": "^14.17.4",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  },
+  "files": [
+    "dist",
+    "binding.gyp",
+    "install.js",
+    "src/binding/*.h",
+    "src/binding/*.cpp"
+  ],
+  "scripts": {
+    "build:cleanup": "rimraf dist",
+    "build:compile": "tsc",
+    "build:declarations": "rsync -a --include='*.d.ts' --include='*/' --exclude='*' src/binding dist/",
+    "build:ts": "run-s build:cleanup build:compile build:declarations",
+    "build:bindings": "node install.js",
+    "build:docs:extract": "api-extractor run --local",
+    "build:docs:generate": "api-documenter markdown -i .tmp -o docs",
+    "build:docs": "run-s build:docs:extract build:docs:generate",
+    "build": "run-s build:bindings build:ts build:docs",
+    "install": "npm run build:bindings"
+  }
+}
