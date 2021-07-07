@@ -117,7 +117,9 @@ export declare function txServo(handle: number, gpio: number, pulseWidth: number
  * Each pulse is defined by an object with the following properties:
  *
  *  - `bits` (`bigint`): the levels to set for the selected GPIO
+ *
  *  - `mask` (`bigint`): the GPIO to select
+ *
  *  - `delay` (`number`): the delay in microseconds before the next pulse
  *
  * Another wave command may be issued to the group before the last has finished transmission.

@@ -103,10 +103,15 @@ export declare function gpioSetSamplesFunc(callback: (alerts: GpioAlert[]) => vo
  * Each notification occupies 16 bytes in the fifo and has the following structure:
  *
  *  - `timestamp` (`uint64`): The alert time in nanoseconds since the UNIX epoch
+ *
  *  - `chip` (`uint8`): The gpiochip device number
+ *
  *  - `gpio` (`uint8`): Offset into the gpio device
+ *
  *  - `level` (`uint8`): The GPIO level (0=low, 1=high, 2=watchdog)
+ *
  *  - `flags` (`uint8`): None currently defined
+ *
  *
  * For future proofing it is probably best to ignore any notification with non-zero flags.
  *
