@@ -8,8 +8,21 @@
     "gpio",
     "lgpio"
   ],
-  "author": "Dan Kadera <me@subsonic.cz>",
+  "author": {
+    "name": "Dan Kadera",
+    "email": "me@subsonic.cz",
+    "url": "https://github.com/jahudka"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/jahudka/node-lgpio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jahudka/node-lgpio.git"
+  },
+  "bugs": {
+    "email": "me@subsonic.cz",
+    "url": "https://github.com/jahudka/node-lgpio/issues"
+  },
   "dependencies": {
     "bindings": "^1.5.0",
     "node-addon-api": "^4.0.0"
