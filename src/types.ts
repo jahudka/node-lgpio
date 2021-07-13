@@ -187,3 +187,17 @@ export enum CfgId {
   DEBUG_LEVEL = 0,
   MIN_DELAY = 1,
 }
+
+/**
+ * An I2C message object.
+ *
+ * @remarks
+ * See {@link i2cSegments|i2cSegments()}.
+ *
+ * @public
+ */
+export type I2cMsg = {
+  addr: number;
+  flags: number;
+  buf: Uint8Array;
+};

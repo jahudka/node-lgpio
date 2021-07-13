@@ -1,7 +1,7 @@
 {
   "name": "lgpio",
-  "version": "0.0.0",
-  "description": "LGPIO bindings for NodeJS",
+  "version": "1.0.0",
+  "description": "lg GPIO bindings for NodeJS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "keywords": [

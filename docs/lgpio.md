@@ -44,12 +44,43 @@
 |  [groupFree(handle, gpio)](./lgpio.groupfree.md) | This frees all the GPIO associated with a group. |
 |  [groupRead(handle, gpio)](./lgpio.groupread.md) | This returns the levels read from a group. |
 |  [groupWrite(handle, gpio, levels, mask)](./lgpio.groupwrite.md) | This sets the levels of an output group. |
+|  [i2cBlockProcessCall(handle, i2cReg, ioBuf, count)](./lgpio.i2cblockprocesscall.md) | This writes data bytes to the specified register of the device and reads a device specified number of bytes of data in return. |
+|  [i2cClose(handle)](./lgpio.i2cclose.md) | This closes the I2C device. |
+|  [i2cOpen(i2cDev, i2cAddr, i2cFlags)](./lgpio.i2copen.md) | This returns a handle for the device at the address on the I2C bus. |
+|  [i2cProcessCall(handle, i2cReg, wordVal)](./lgpio.i2cprocesscall.md) | This writes 16 bits of data to the specified register of the device and reads 16 bits of data in return. |
+|  [i2cReadBlockData(handle, i2cReg, rxBuf)](./lgpio.i2creadblockdata.md) | This reads up to 32 bytes from the specified register of the device. |
+|  [i2cReadByte(handle)](./lgpio.i2creadbyte.md) | This reads a single byte from the device. |
+|  [i2cReadByteData(handle, i2cReg)](./lgpio.i2creadbytedata.md) | This reads a single byte from the specified register of the device. |
+|  [i2cReadDevice(handle, rxBuf)](./lgpio.i2creaddevice.md) | This reads count bytes from the raw device. |
+|  [i2cReadI2CBlockData(handle, i2cReg, rxBuf)](./lgpio.i2creadi2cblockdata.md) | This reads <code>rxBuf.length</code> bytes from the specified register of the device. The count may be 1-32. |
+|  [i2cReadWordData(handle, i2cReg)](./lgpio.i2creadworddata.md) | This reads a single 16-bit word from the specified register of the device. |
+|  [i2cSegments(handle, segs)](./lgpio.i2csegments.md) | This function executes multiple I2C segments in one transaction by calling the <code>I2C_RDWR</code> ioctl. |
+|  [i2cWriteBlockData(handle, i2cReg, data)](./lgpio.i2cwriteblockdata.md) | This writes up to 32 bytes to the specified register of the device. |
+|  [i2cWriteByte(handle, byteVal)](./lgpio.i2cwritebyte.md) | This sends a single byte to the device. |
+|  [i2cWriteByteData(handle, i2cReg, byteVal)](./lgpio.i2cwritebytedata.md) | This writes a single byte to the specified register of the device. |
+|  [i2cWriteDevice(handle, data)](./lgpio.i2cwritedevice.md) | This writes a buffer of bytes to the raw device. |
+|  [i2cWriteI2CBlockData(handle, i2cReg, data)](./lgpio.i2cwritei2cblockdata.md) | This writes up to 32 bytes to the specified register of the device. |
+|  [i2cWriteQuick(handle, bitVal)](./lgpio.i2cwritequick.md) | This sends a single bit (in the Rd/Wr bit) to the device. |
+|  [i2cWriteWordData(handle, i2cReg, wordVal)](./lgpio.i2cwriteworddata.md) | This writes a single 16-bit word to the specified register of the device. |
+|  [i2cZip(handle, txBuf, rxBuf)](./lgpio.i2czip.md) | This function executes a sequence of I2C operations. The operations to be performed are specified by the contents of txBuf which contains the concatenated command codes and associated data. |
 |  [notifyClose(handle)](./lgpio.notifyclose.md) | This function stops notifications and frees the handle for reuse. |
 |  [notifyOpen()](./lgpio.notifyopen.md) | This function requests a free notification. |
 |  [notifyPause(handle)](./lgpio.notifypause.md) | This function pauses notifications. |
 |  [notifyResume(handle)](./lgpio.notifyresume.md) | This function restarts notifications on a paused notification. |
+|  [serialClose(handle)](./lgpio.serialclose.md) | This function closes the serial device. |
+|  [serialDataAvailable(handle)](./lgpio.serialdataavailable.md) | This function returns the count of bytes available to be read from the device. |
+|  [serialOpen(serDev, serBaud, serFlags)](./lgpio.serialopen.md) | This function opens a serial device at a specified baud rate and with specified flags. |
+|  [serialRead(handle, rxBuf)](./lgpio.serialread.md) | This function reads up to <code>rxBuf.length</code> bytes from the serial device. |
+|  [serialReadByte(handle)](./lgpio.serialreadbyte.md) | This function reads a byte from the serial device. |
+|  [serialWrite(handle, txBuf)](./lgpio.serialwrite.md) | This function writes <code>txBuf</code> to the serial device. |
+|  [serialWriteByte(handle, byteVal)](./lgpio.serialwritebyte.md) | This function writes a byte to the serial device. |
 |  [setInternal(cfgId, value)](./lgpio.setinternal.md) | Set an internal configuration value. |
 |  [setWorkDir(dirPath)](./lgpio.setworkdir.md) | Sets the library working directory. |
+|  [spiClose(handle)](./lgpio.spiclose.md) | This closes the SPI device. |
+|  [spiOpen(spiDev, spiChan, spiBaud, spiFlags)](./lgpio.spiopen.md) | This function returns a handle for the SPI device on the channel. |
+|  [spiRead(handle, rxBuf)](./lgpio.spiread.md) | This function reads <code>count</code> bytes of data from the SPI device. |
+|  [spiWrite(handle, txBuf)](./lgpio.spiwrite.md) | This function writes <code>txBuf</code> to the SPI device. |
+|  [spiXfer(handle, txBuf, rxBuf)](./lgpio.spixfer.md) | This function transfers data from <code>txBuf</code> to the SPI device. Simultaneously <code>txBuf.length</code> bytes of data are read from the device and written to <code>rxBuf</code>. |
 |  [timestamp()](./lgpio.timestamp.md) | Returns the current timestamp. |
 |  [txBusy(handle, gpio, kind)](./lgpio.txbusy.md) | This returns true if transmissions of the specified kind are active on the GPIO or group. |
 |  [txPulse(handle, gpio, pulseOn, pulseOff, pulseOffset, pulseCycles)](./lgpio.txpulse.md) | This starts software timed pulses on an output GPIO. |
@@ -67,5 +98,6 @@
 |  [GpioChipInfo](./lgpio.gpiochipinfo.md) | Information about the GPIO chip. |
 |  [GpioLineInfo](./lgpio.gpiolineinfo.md) | Information about a GPIO. |
 |  [GpioReport](./lgpio.gpioreport.md) | An object representing the details of a GPIO alert. |
+|  [I2cMsg](./lgpio.i2cmsg.md) | An I2C message object. |
 |  [TxWavePulse](./lgpio.txwavepulse.md) | An object representing a pulse in a wave sequence. |
 

@@ -1,10 +1,13 @@
 #include <napi.h>
 #include <string>
 
+#include "./alerts.h"
 #include "./chip.h"
 #include "./gpio.h"
+#include "./i2c.h"
+#include "./serial.h"
+#include "./spi.h"
 #include "./tx.h"
-#include "./alerts.h"
 #include "./utils.h"
 
 using namespace Napi;
@@ -194,6 +197,166 @@ Object Init(Env env, Object exports) {
   exports.Set(
     String::New(env, "getWorkDir"),
     Function::New(env, getWorkDir)
+  );
+
+  exports.Set(
+    String::New(env, "i2cOpen"),
+    Function::New(env, i2cOpen)
+  );
+
+  exports.Set(
+    String::New(env, "i2cClose"),
+    Function::New(env, i2cClose)
+  );
+
+  exports.Set(
+    String::New(env, "i2cWriteQuick"),
+    Function::New(env, i2cWriteQuick)
+  );
+
+  exports.Set(
+    String::New(env, "i2cWriteByte"),
+    Function::New(env, i2cWriteByte)
+  );
+
+  exports.Set(
+    String::New(env, "i2cWriteByte"),
+    Function::New(env, i2cWriteByte)
+  );
+
+  exports.Set(
+    String::New(env, "i2cReadByte"),
+    Function::New(env, i2cReadByte)
+  );
+
+  exports.Set(
+    String::New(env, "i2cWriteByteData"),
+    Function::New(env, i2cWriteByteData)
+  );
+
+  exports.Set(
+    String::New(env, "i2cWriteWordData"),
+    Function::New(env, i2cWriteWordData)
+  );
+
+  exports.Set(
+    String::New(env, "i2cReadByteData"),
+    Function::New(env, i2cReadByteData)
+  );
+
+  exports.Set(
+    String::New(env, "i2cReadWordData"),
+    Function::New(env, i2cReadWordData)
+  );
+
+  exports.Set(
+    String::New(env, "i2cProcessCall"),
+    Function::New(env, i2cProcessCall)
+  );
+
+  exports.Set(
+    String::New(env, "i2cWriteBlockData"),
+    Function::New(env, i2cWriteBlockData)
+  );
+
+  exports.Set(
+    String::New(env, "i2cReadBlockData"),
+    Function::New(env, i2cReadBlockData)
+  );
+
+  exports.Set(
+    String::New(env, "i2cBlockProcessCall"),
+    Function::New(env, i2cBlockProcessCall)
+  );
+
+  exports.Set(
+    String::New(env, "i2cReadI2CBlockData"),
+    Function::New(env, i2cReadI2CBlockData)
+  );
+
+  exports.Set(
+    String::New(env, "i2cWriteI2CBlockData"),
+    Function::New(env, i2cWriteI2CBlockData)
+  );
+
+  exports.Set(
+    String::New(env, "i2cReadDevice"),
+    Function::New(env, i2cReadDevice)
+  );
+
+  exports.Set(
+    String::New(env, "i2cWriteDevice"),
+    Function::New(env, i2cWriteDevice)
+  );
+
+  exports.Set(
+    String::New(env, "i2cSegments"),
+    Function::New(env, i2cSegments)
+  );
+
+  exports.Set(
+    String::New(env, "i2cZip"),
+    Function::New(env, i2cZip)
+  );
+
+  exports.Set(
+    String::New(env, "serialOpen"),
+    Function::New(env, serialOpen)
+  );
+
+  exports.Set(
+    String::New(env, "serialClose"),
+    Function::New(env, serialClose)
+  );
+
+  exports.Set(
+    String::New(env, "serialWriteByte"),
+    Function::New(env, serialWriteByte)
+  );
+
+  exports.Set(
+    String::New(env, "serialReadByte"),
+    Function::New(env, serialReadByte)
+  );
+
+  exports.Set(
+    String::New(env, "serialWrite"),
+    Function::New(env, serialWrite)
+  );
+
+  exports.Set(
+    String::New(env, "serialRead"),
+    Function::New(env, serialRead)
+  );
+
+  exports.Set(
+    String::New(env, "serialDataAvailable"),
+    Function::New(env, serialDataAvailable)
+  );
+
+  exports.Set(
+    String::New(env, "spiOpen"),
+    Function::New(env, spiOpen)
+  );
+
+  exports.Set(
+    String::New(env, "spiClose"),
+    Function::New(env, spiClose)
+  );
+
+  exports.Set(
+    String::New(env, "spiRead"),
+    Function::New(env, spiRead)
+  );
+
+  exports.Set(
+    String::New(env, "spiWrite"),
+    Function::New(env, spiWrite)
+  );
+
+  exports.Set(
+    String::New(env, "spiXfer"),
+    Function::New(env, spiXfer)
   );
 
   return exports;

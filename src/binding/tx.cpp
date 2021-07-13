@@ -70,11 +70,12 @@ Number txWave(const CallbackInfo& info) {
   cPulses.reserve(n);
 
   for (int i = 0; i < n; ++i) {
-    lgPulse_t pulse;
-    pulse.bits = jsPulses.Get(i).As<Object>().Get("bits").As<BigInt>().Uint64Value(&lossless);
-    pulse.mask = jsPulses.Get(i).As<Object>().Get("mask").As<BigInt>().Uint64Value(&lossless);
-    pulse.delay = jsPulses.Get(i).As<Object>().Get("delay").As<Number>();
-    cPulses.push_back(pulse);
+    Object jsPulse = jsPulses.Get(i).As<Object>();
+    lgPulse_t cPulse;
+    cPulse.bits = jsPulse.Get("bits").As<BigInt>().Uint64Value(&lossless);
+    cPulse.mask = jsPulse.Get("mask").As<BigInt>().Uint64Value(&lossless);
+    cPulse.delay = jsPulse.Get("delay").As<Number>();
+    cPulses.push_back(cPulse);
   }
 
   int result = lgTxWave(handle, gpio, n, &cPulses[0]);

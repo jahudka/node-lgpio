@@ -10,15 +10,6 @@ bool isDefined(const Value& value) {
   return !value.IsUndefined() && !value.IsNull();
 }
 
-template<class T, typename R>
-R getOptionalArg(const CallbackInfo& info, int index, R fallback) {
-  if (info.Length() > index && isDefined(info[index])) {
-    return (R) info[index].As<T>();
-  }
-
-  return fallback;
-}
-
 Error createError(const Env& env, string msg, int code = 0) {
   if (code != 0) {
     return Error::New(env, msg + ": " + lguErrorText(code));

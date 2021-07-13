@@ -6,8 +6,14 @@ using namespace std;
 
 bool isDefined(const Value& value);
 
-template<class T, typename R>
-R getOptionalArg(const CallbackInfo& info, int index, R fallback);
+template<class T, typename R> inline
+R getOptionalArg(const CallbackInfo& info, size_t index, R fallback) {
+  if (info.Length() > index && isDefined(info[index])) {
+    return (R) info[index].As<T>();
+  }
+
+  return fallback;
+}
 
 Error createError(const Env& env, string msg, int code = 0);
 
