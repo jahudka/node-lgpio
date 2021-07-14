@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "lg GPIO bindings for NodeJS",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/typings.d.ts",
   "keywords": [
     "gpio",
     "lgpio"

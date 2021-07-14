@@ -1,4 +1,4 @@
-import { GpioFlag, GpioLineInfo, GpioMode } from '../types';
+import { GpioFlag, GpioLineInfo, GpioMode } from '../enums';
 
 /**
  * Returns information about a GPIO.

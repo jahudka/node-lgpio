@@ -1,4 +1,4 @@
-import { GpioChipInfo } from '../types';
+import { GpioChipInfo } from '../enums';
 
 /**
  * This returns a handle to a gpiochip device.

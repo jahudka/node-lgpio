@@ -1,4 +1,4 @@
-import { I2cMsg } from '../types';
+import { I2cMsg } from '../enums';
 
 /**
  * This returns a handle for the device at the address on the I2C bus.

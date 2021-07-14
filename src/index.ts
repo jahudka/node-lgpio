@@ -1,4 +1,2 @@
-exports = module.exports = require('bindings')('lgpio');
-
-export * from './binding';
-export * from './types';
+module.exports = exports = require('bindings')('lgpio');
+export * from './enums';

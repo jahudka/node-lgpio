@@ -1,4 +1,4 @@
-import { GpioAlert, GpioEdge, GpioFlag } from '../types';
+import { GpioAlert, GpioEdge, GpioFlag } from '../enums';
 
 /**
  * This claims a GPIO for alerts on level changes.

@@ -1,4 +1,4 @@
-import { TxKind, TxWavePulse } from '../types';
+import { TxKind, TxWavePulse } from '../enums';
 
 /**
  * This starts software timed pulses on an output GPIO.

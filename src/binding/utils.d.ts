@@ -1,4 +1,4 @@
-import { CfgId } from '../types';
+import { CfgId } from '../enums';
 
 /**
  * Returns the current timestamp.
