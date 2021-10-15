@@ -86,6 +86,9 @@ export enum GpioFlag {
   SET_ACTIVE_LOW = 1 << 2,
   SET_OPEN_DRAIN = 1 << 3,
   SET_OPEN_SOURCE = 1 << 4,
+  SET_PULL_UP = 1 << 5,
+  SET_PULL_DOWN = 1 << 6,
+  SET_PULL_NONE = 1 << 7,
 }
 
 /**

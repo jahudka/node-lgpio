@@ -19,6 +19,9 @@ export declare enum GpioFlag
 |  SET\_ACTIVE\_LOW | <code>4</code> |  |
 |  SET\_OPEN\_DRAIN | <code>8</code> |  |
 |  SET\_OPEN\_SOURCE | <code>16</code> |  |
+|  SET\_PULL\_DOWN | <code>64</code> |  |
+|  SET\_PULL\_NONE | <code>128</code> |  |
+|  SET\_PULL\_UP | <code>32</code> |  |
 
 ## Remarks
 
