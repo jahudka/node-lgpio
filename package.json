@@ -1,6 +1,6 @@
 {
   "name": "lgpio",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "lg GPIO bindings for NodeJS",
   "main": "dist/index.js",
   "types": "dist/typings.d.ts",
