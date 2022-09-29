@@ -19,7 +19,7 @@ export declare function spiOpen(spiDev: number, spiChan: number, spiBaud: number
 |  spiDev | number | The SPI device ID |
 |  spiChan | number | The SPI device channel |
 |  spiBaud | number | The SPI speed to set in bits per second |
-|  spiFlags | number | See remarks |
+|  spiFlags | number | <i>(Optional)</i> See remarks |
 
 <b>Returns:</b>
 
@@ -36,7 +36,6 @@ The flags may be used to modify the default behaviour.
 ```
 1  0
 m  m
-
 ```
 `mm` defines the SPI mode.
 
@@ -46,7 +45,6 @@ Mode POL PHA
 1    0   1
 2    1   0
 3    1   1
-
 ```
 The other bits in flags should be set to zero.
 

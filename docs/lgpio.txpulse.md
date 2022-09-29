@@ -20,8 +20,8 @@ export declare function txPulse(handle: number, gpio: number, pulseOn: number, p
 |  gpio | number | The GPIO number |
 |  pulseOn | number | Pulse high time in microseconds |
 |  pulseOff | number | Pulse low time in microseconds |
-|  pulseOffset | number | Offset from nominal pulse start position |
-|  pulseCycles | number | The number of pulses to send, 0 or unspecified for infinite |
+|  pulseOffset | number | <i>(Optional)</i> Offset from nominal pulse start position |
+|  pulseCycles | number | <i>(Optional)</i> The number of pulses to send, 0 or unspecified for infinite |
 
 <b>Returns:</b>
 

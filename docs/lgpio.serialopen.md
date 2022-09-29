@@ -18,7 +18,7 @@ export declare function serialOpen(serDev: string, serBaud: number, serFlags?: n
 |  --- | --- | --- |
 |  serDev | string | The serial device to open |
 |  serBaud | number | The baud rate in bits per second, see remarks |
-|  serFlags | number | No flags are currently defined; this parameter should be omitted or set to zero |
+|  serFlags | number | <i>(Optional)</i> No flags are currently defined; this parameter should be omitted or set to zero |
 
 <b>Returns:</b>
 

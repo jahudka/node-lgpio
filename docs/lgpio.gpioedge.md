@@ -16,9 +16,9 @@ export declare enum GpioEdge
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  BOTH | <code>3</code> |  |
-|  FALLING | <code>2</code> |  |
 |  RISING | <code>1</code> |  |
+|  FALLING | <code>2</code> |  |
+|  BOTH | <code>3</code> |  |
 
 ## Remarks
 

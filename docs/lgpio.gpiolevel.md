@@ -16,8 +16,8 @@ export declare enum GpioLevel
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  HIGH | <code>1</code> |  |
 |  LOW | <code>0</code> |  |
+|  HIGH | <code>1</code> |  |
 |  WATCHDOG | <code>2</code> |  |
 
 ## Remarks

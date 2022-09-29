@@ -16,18 +16,18 @@ export declare enum GpioMode
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  ALERT | <code>1024</code> |  |
-|  GROUP | <code>2048</code> |  |
-|  INPUT | <code>256</code> |  |
-|  KERNEL\_ACTIVE\_LOW | <code>4</code> |  |
 |  KERNEL\_IN\_USE | <code>1</code> |  |
+|  KERNEL\_OUTPUT | <code>2</code> |  |
+|  KERNEL\_ACTIVE\_LOW | <code>4</code> |  |
 |  KERNEL\_OPEN\_DRAIN | <code>8</code> |  |
 |  KERNEL\_OPEN\_SOURCE | <code>16</code> |  |
-|  KERNEL\_OUTPUT | <code>2</code> |  |
 |  KERNEL\_UNUSED\_1 | <code>32</code> |  |
 |  KERNEL\_UNUSED\_2 | <code>64</code> |  |
 |  KERNEL\_UNUSED\_3 | <code>128</code> |  |
+|  INPUT | <code>256</code> |  |
 |  OUTPUT | <code>512</code> |  |
+|  ALERT | <code>1024</code> |  |
+|  GROUP | <code>2048</code> |  |
 |  UNUSED\_1 | <code>4096</code> |  |
 |  UNUSED\_2 | <code>8192</code> |  |
 |  UNUSED\_3 | <code>16384</code> |  |

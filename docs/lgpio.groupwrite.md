@@ -19,7 +19,7 @@ export declare function groupWrite(handle: number, gpio: number, levels: bigint,
 |  handle | number | The GPIO device handle as returned by [gpiochipOpen()](./lgpio.gpiochipopen.md) |
 |  gpio | number | The group leader GPIO number |
 |  levels | bigint | The levels to set |
-|  mask | bigint | Bitmask indicating the members of the group whose level should be updated |
+|  mask | bigint | <i>(Optional)</i> Bitmask indicating the members of the group whose level should be updated |
 
 <b>Returns:</b>
 

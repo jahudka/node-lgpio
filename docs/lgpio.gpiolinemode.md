@@ -16,11 +16,11 @@ export declare enum GpioLineMode
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  ACTIVE\_LOW | <code>4</code> |  |
 |  KERNEL\_IN\_USE | <code>1</code> |  |
+|  OUTPUT | <code>2</code> |  |
+|  ACTIVE\_LOW | <code>4</code> |  |
 |  OPEN\_DRAIN | <code>8</code> |  |
 |  OPEN\_SOURCE | <code>16</code> |  |
-|  OUTPUT | <code>2</code> |  |
 
 ## Remarks
 

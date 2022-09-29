@@ -18,7 +18,7 @@ export declare function gpioClaimInput(handle: number, gpio: number, flags?: Gpi
 |  --- | --- | --- |
 |  handle | number | The GPIO device handle as returned by [gpiochipOpen()](./lgpio.gpiochipopen.md) |
 |  gpio | number | The GPIO number |
-|  flags | [GpioFlag](./lgpio.gpioflag.md) | Bitmask of the available [GPIO flags](./lgpio.gpioflag.md) |
+|  flags | [GpioFlag](./lgpio.gpioflag.md) | <i>(Optional)</i> Bitmask of the available [GPIO flags](./lgpio.gpioflag.md) |
 
 <b>Returns:</b>
 

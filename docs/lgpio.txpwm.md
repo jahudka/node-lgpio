@@ -20,8 +20,8 @@ export declare function txPwm(handle: number, gpio: number, pwmFrequency: number
 |  gpio | number | The GPIO number |
 |  pwmFrequency | number | The PWM frequency in Hz (0=off, 0.1-10000) |
 |  pwmDutyCycle | number | The PWM duty cycle in % (0-100) |
-|  pwmOffset | number | Offset from nominal pulse start position |
-|  pwmCycles | number | The number of pulses to send, 0 or unspecified for infinite |
+|  pwmOffset | number | <i>(Optional)</i> Offset from nominal pulse start position |
+|  pwmCycles | number | <i>(Optional)</i> The number of pulses to send, 0 or unspecified for infinite |
 
 <b>Returns:</b>
 

@@ -20,7 +20,7 @@ export declare function gpioClaimAlert(handle: number, flags: GpioFlag, edges: G
 |  flags | [GpioFlag](./lgpio.gpioflag.md) | Bitmask of the available [GPIO flags](./lgpio.gpioflag.md) |
 |  edges | [GpioEdge](./lgpio.gpioedge.md) | Bitmask of the [edge flags](./lgpio.gpioedge.md) on which an alert should trigger |
 |  gpio | number | The GPIO number |
-|  nfyHandle | number | A notification channel handle as returned by [notifyOpen()](./lgpio.notifyopen.md) |
+|  nfyHandle | number | <i>(Optional)</i> A notification channel handle as returned by [notifyOpen()](./lgpio.notifyopen.md) |
 
 <b>Returns:</b>
 

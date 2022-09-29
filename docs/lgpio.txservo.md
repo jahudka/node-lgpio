@@ -20,8 +20,8 @@ export declare function txServo(handle: number, gpio: number, pulseWidth: number
 |  gpio | number | The GPIO number |
 |  pulseWidth | number | Pulse high time in microseconds (0=off, 500-2500) |
 |  servoFrequency | number | The number of pulses per second (40-500) |
-|  servoOffset | number | Offset from nominal pulse start position |
-|  servoCycles | number | The number of pulses to be sent, 0 or unspecified for infinite |
+|  servoOffset | number | <i>(Optional)</i> Offset from nominal pulse start position |
+|  servoCycles | number | <i>(Optional)</i> The number of pulses to be sent, 0 or unspecified for infinite |
 
 <b>Returns:</b>
 

@@ -18,7 +18,7 @@ export declare function i2cOpen(i2cDev: number, i2cAddr: number, i2cFlags?: numb
 |  --- | --- | --- |
 |  i2cDev | number | The I2C bus device ID |
 |  i2cAddr | number | The I2C device address |
-|  i2cFlags | number | No flags are currently defined; this parameter should be omitted or set to zero |
+|  i2cFlags | number | <i>(Optional)</i> No flags are currently defined; this parameter should be omitted or set to zero |
 
 <b>Returns:</b>
 

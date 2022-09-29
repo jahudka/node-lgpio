@@ -18,8 +18,8 @@ export declare function groupClaimOutput(handle: number, gpios: number[], levels
 |  --- | --- | --- |
 |  handle | number | The GPIO device handle as returned by [gpiochipOpen()](./lgpio.gpiochipopen.md) |
 |  gpios | number\[\] | An array of one or more GPIO; the first GPIO is called the group leader and is used to reference the group as a whole |
-|  levels | boolean\[\] | An array of the initial logical levels for the GPIOs |
-|  flags | [GpioFlag](./lgpio.gpioflag.md) | Bitmask of the available [GPIO flags](./lgpio.gpioflag.md) |
+|  levels | boolean\[\] | <i>(Optional)</i> An array of the initial logical levels for the GPIOs |
+|  flags | [GpioFlag](./lgpio.gpioflag.md) | <i>(Optional)</i> Bitmask of the available [GPIO flags](./lgpio.gpioflag.md) |
 
 <b>Returns:</b>
 
